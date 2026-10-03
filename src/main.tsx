@@ -6,7 +6,7 @@ import './app/styles/global.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/max-messenger-client">
       <App />
     </BrowserRouter>
   </StrictMode>,
