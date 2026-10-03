@@ -1,0 +1,25 @@
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  max-width: min(70%, 520px);
+  padding: 9px 12px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.messageIncoming {
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+.messageMine {
+  background: #e5e8eb;
+}
+
+.messageTime {
+  flex-shrink: 0;
+  color: #999ea3;
+  font-size: 10px;
+}

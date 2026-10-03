@@ -1,0 +1,103 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 8%);
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+}
+
+.field input:focus {
+  border-color: #999;
+}
+
+.field input:disabled {
+  background: #f5f5f5;
+}
+
+.form button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form button:hover:not(:disabled) {
+  background: #333;
+}
+
+.form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 13px;
+  color: #d32f2f;
+}
+
+.generalError {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #c62828;
+  font-size: 14px;
+  line-height: 1.4;
+}
