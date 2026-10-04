@@ -17,7 +17,7 @@ export const ChatHeader = ({ chat, onBack }: Props) => {
           title='Назад'
           onClick={onBack}
         >
-          <ArrowLeft size={24} />
+          <ArrowLeft size={24} className={styles.backButtonIcon} />
         </button>
 
         <div className={styles.chatUser}>

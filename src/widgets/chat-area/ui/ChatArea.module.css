@@ -132,17 +132,24 @@
   }
 
   .backButton {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
+    padding: 0;
     border: none;
     border-radius: 12px;
     background: transparent;
     cursor: pointer;
+  }
 
-    &:hover {
-      background: #f1f3f5;
-    }
+  .backButton:hover {
+    background: #f1f3f5;
+  }
+
+  .backButtonIcon {
+    color: #202326;
   }
 
   .menuButton {
