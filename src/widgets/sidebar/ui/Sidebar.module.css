@@ -8,6 +8,10 @@
   background: #fff;
 }
 
+.hiddenOnMobile {
+  display: flex;
+}
+
 .sidebarHeader {
   display: flex;
   align-items: center;
@@ -76,6 +80,10 @@
 @media (max-width: 700px) {
   .sidebar {
     width: 100%;
+  }
+
+  .hiddenOnMobile {
+    display: none;
   }
 
   .sidebarHeader {

@@ -8,13 +8,15 @@ import styles from './ChatArea.module.css';
 interface Props {
   chat: Chat | null;
   messages: MessageType[];
+  isHiddenOnMobile: boolean;
   onSent: (message: MessageType) => void;
+  onBack: () => void;
 }
 
-export const ChatArea = ({ chat, messages, onSent }: Props) => {
+export const ChatArea = ({ chat, messages, isHiddenOnMobile, onSent, onBack }: Props) => {
   if (!chat) {
     return (
-      <section className={styles.chat}>
+      <section className={`${styles.chat} ${isHiddenOnMobile ? styles.hiddenOnMobile : ''}`}>
         <div className={styles.emptyChat}>
           <div className={styles.emptyChatIcon}>M</div>
           <h2>Max Messenger Client</h2>
@@ -26,7 +28,7 @@ export const ChatArea = ({ chat, messages, onSent }: Props) => {
 
   return (
     <section className={styles.chat}>
-      <ChatHeader chat={chat} />
+      <ChatHeader chat={chat} onBack={onBack}/>
       <MessagesList messages={messages} />
       <Composer chatId={chat.chatId} onSent={onSent} />
     </section>

@@ -21,6 +21,7 @@ export const ChatPage = () => {
     handleChatCreated,
     handleSelectChat,
     handleSent,
+    handleBackToChats
   } = useChatPage();
 
   const { search, setSearch, filtered } = useChatSearch(chats);
@@ -41,6 +42,7 @@ export const ChatPage = () => {
           onSelectChat={handleSelectChat}
           onNewChat={() => setIsNewChatOpen(true)}
           onLogout={handleLogout}
+          isHiddenOnMobile={selectedChatId !== null}
         />
 
         <ChatArea
@@ -51,6 +53,8 @@ export const ChatPage = () => {
               handleSent(selectedChat.id, message);
             }
           }}
+          isHiddenOnMobile={selectedChatId === null}
+          onBack={handleBackToChats}
         />
       </div>
 

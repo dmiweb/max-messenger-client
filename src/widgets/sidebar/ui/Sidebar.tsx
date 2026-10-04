@@ -8,6 +8,7 @@ interface Props {
   chats: Chat[];
   selectedChatId: string | null;
   search: string;
+  isHiddenOnMobile: boolean;
   onSearchChange: (value: string) => void;
   onSelectChat: (chatId: string) => void;
   onNewChat: () => void;
@@ -22,9 +23,11 @@ export const Sidebar = ({
   onSelectChat,
   onNewChat,
   onLogout,
+  isHiddenOnMobile
 }: Props) => {
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={`${styles.sidebar} ${isHiddenOnMobile ? styles.hiddenOnMobile : ''}`}>
       <header className={styles.sidebarHeader}>
         <h1 className={styles.logo}>Max Messenger Client</h1>
 

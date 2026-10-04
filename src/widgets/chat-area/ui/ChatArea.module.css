@@ -6,14 +6,21 @@
   background: #f8f9fa;
 }
 
+.hiddenOnMobile {
+  display: flex;
+}
+
 .chatHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 64px;
   padding: 0 20px;
   border-bottom: 1px solid #e6e8eb;
   background: #fff;
+}
+
+.backButton {
+  display: none;
 }
 
 .chatUser {
@@ -33,6 +40,10 @@
   color: #90959b;
   font-size: 18px;
   font-weight: 600;
+}
+
+.menuButton {
+  margin-left: auto;
 }
 
 .messages {
@@ -112,7 +123,29 @@
 }
 
 @media (max-width: 700px) {
-  .chat {
+  .hiddenOnMobile {
     display: none;
+  }
+
+  .chatHeader {
+    justify-content: space-between;
+  }
+
+  .backButton {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: #f1f3f5;
+    }
+  }
+
+  .menuButton {
+    margin-left: 0;
   }
 }

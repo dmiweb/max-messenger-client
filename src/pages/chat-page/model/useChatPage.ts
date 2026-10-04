@@ -110,6 +110,10 @@ export const useChatPage = () => {
     );
   };
 
+  const handleBackToChats = () => {
+    setSelectedChatId(null);
+  };
+
   const selectedChat = useMemo(
     () => chats.find((chat) => chat.id === selectedChatId) ?? null,
     [chats, selectedChatId],
@@ -129,5 +133,6 @@ export const useChatPage = () => {
     handleChatCreated,
     handleSelectChat,
     handleSent,
+    handleBackToChats
   };
 }
